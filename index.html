@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Digital Clock </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div class="clock">
+        <div class="display"></div>
+    </div>
+
+    <script>
+       setInterval(function(){
+        const clock=document.querySelector(".display");
+        let time=new Date();
+        let sec =time.getSeconds();
+        let min =time.getMinutes();
+        let hr =time.getHours();
+        let day='PM';
+        clock.textContent=hr + ':' + min + ':' + sec + " "+ day;
+       });
+    </script>
+</body>
+</html>
